@@ -155,8 +155,6 @@ namespace ObcyInDesktop.UI
 
             Colors.CaptionButtonIdle = ColorSchemes[ColorSchemeID]["CaptionButtonIdle"].ToColor();
             Colors.CaptionButtonHover = ColorSchemes[ColorSchemeID]["CaptionButtonHover"].ToColor();
-            Colors.PanelHideButtonIdle = ColorSchemes[ColorSchemeID]["PanelHideButtonIdle"].ToColor();
-            Colors.PanelHideButtonHover = ColorSchemes[ColorSchemeID]["PanelHideButtonHover"].ToColor();
 
             Colors.GroupBoxBorder = ColorSchemes[ColorSchemeID]["GroupBoxBorder"].ToColor();
         }
