@@ -1,0 +1,114 @@
+# Menu related strings
+Menu_File=File
+Menu_File_Archives=Archives
+Menu_File_Exit=Exit
+
+Menu_Options=Options
+Menu_Options_Settings=Settings
+
+Menu_View=View
+Menu_View_ToggleToolbar=Toggle toolbar
+Menu_View_ToggleCopyView=Toggle copy-view
+Menu_View_AboutThisApplication=About this application
+
+# Toolbar related strings
+ToolBar_CopyViewToggleButton_ToolTip=Toggle copy-view (Ctrl+D)
+ToolBar_ScrollToggleButton_ToolTip=Toggle automatic log scrolling (Ctrl+H)
+ToolBar_ClearLogButton_ToolTip=Erase current log contents (Ctrl+L)
+ToolBar_FlagStrangerButton_ToolTip=Flag current stranger as unpleasant (Ctrl+F)
+ToolBar_RequestRandomTopicButton_Tooltip=Generate a random topic to discuss about (Ctrl+T)
+ToolBar_DisconnectStrangerButton_ToolTip=Disconnect from current stranger (Double-Escape)
+ToolBar_SearchForStrangerButton_ToolTip=Search for new stranger (Escape)
+
+# Status indicator related strings
+StatusIndicator_ConnectedToServer=connected to server
+StatusIndicator_ConnectionFailure=connection failure
+StatusIndicator_ServerClosedConnection=server closed connection
+StatusIndicator_StrangerIdle=stranger is idle
+StatusIndicator_StrangerTyping=stranger is typing
+
+# Message control related strings
+MessageControl_Sender_You=you
+MessageControl_Sender_Stranger=stranger
+
+# Topic control related strings
+TopicControl_NewTopicReceived=new conversation topic
+
+# Presence control related strings
+PresenceControl_ConversationStarted=conversation started
+PresenceControl_ConversationEnded=conversation ended
+
+# Left panel related strings
+LeftPanel_StartConversationButton=start conversation
+LeftPanel_EndConversationButton=end conversation
+LeftPanel_SureAboutDisconnect=sure about that?
+LeftPanel_PeopleCountIndicator={0} people online right now
+LeftPanel_PeopleCountIndicatorChecking=checking online people...
+
+# Left panel statistics related strings
+LeftPanel_CurrentConversationTime=current conversation time:
+LeftPanel_BestConversationTime=best conversation time:
+LeftPanel_TotalConversationCount=total conversation count:
+LeftPanel_TotalKilometersCount=total kilometers count:
+LeftPanel_TotalMessagesReceivedCount=total messages received:
+LeftPanel_TotalMessagesSentCount=total messages sent:
+
+# Debugging window related strings
+DebugWindow_Title=Debugging
+DebugWindow_InsertTemplate=insert template
+DebugWindow_ManualOverride=manual packet creation
+
+# Settings window related strings
+SettingsWindow_Title=Settings
+SettingsWindow_GroupBox_Behavior=application behavior
+SettingsWindow_CheckBox_SendSexQueryOnStart=ASL on conversation start
+SettingsWindow_CheckBox_StartupWithSystem=Startup with system
+SettingsWindow_CheckBox_SendUserAgent=Send UserAgent to server
+SettingsWindow_CheckBox_SendChatstate=Report chatstate to server
+SettingsWindow_CheckBox_ToggleCopyViewOnDoubleClick=Copyview on log double-click
+SettingsWindow_CheckBox_UppercaseMenuHeaders=Uppercase menu headers
+SettingsWindow_CheckBox_MessageMargins=Message view margins
+
+SettingsWindow_GroupBox_Appearance=application appearance
+SettingsWindow_Label_ColorScheme=color scheme (needs restart)
+
+SettingsWindow_Label_Language=choose language (needs restart)
+SettingsWindow_Label_Location=choose voivodeship
+SettingsWindow_Label_StorageManagement=storage management
+
+SettingsWindow_Label_Location_WholePoland=Whole Poland
+SettingsWindow_Label_Location_OutsidePoland=Outside Poland
+SettingsWindow_Button_ClearArchive=Erase archive
+SettingsWindow_Button_ClearStatistics=Erase statistics
+
+SettingsWindow_Button_Accept=OK
+
+# About window related strings
+AboutWindow_Title=About this application
+AboutWindow_IronicText=no strangers were harmed during development of this instant messaging application, probably...
+AboutWindow_SpecialThanksShow=view special thanks
+AboutWindow_License=MIT license applies
+
+AboutWindow_EarlyTesting=early pre-release testing
+AboutWindow_ForHer=being my momentum and motivation
+AboutWindow_UltimateBreaker=breaking everything in this app
+
+# Choice window related strings
+ChoiceWindow_Title=Sure about that?
+ChoiceWindow_Yes=Yes
+ChoiceWindow_No=No
+
+ChoiceWindow_StatisticsEraseWarning=Do you really want to erase your hard earned statistics? This is irreversible!
+ChoiceWindow_ArchiveEraseWarning=Do you really want to erase your whole trolling history? You can't get it back once erased!
+
+# Alert window related strings
+AlertWindow_Title=Warning
+AlertWindow_IDontThinkSo=Will be implemented in near future
+AlertWindow_NoWriteAccess=You don't have any rights to write in the application's current folder. Settings and archive will not be saved.
+AlertWindow_ArchiveLoadFailed=Archive file got corrupted and will be deleted. Don't worry, I regret it more than you should...
+AlertWindow_OK=OK
+
+# Archive window related strings
+ArchiveWindow_Title=Archive
+ArchiveWindow_ExportToText=export as text
+ArchiveWindow_MakeBackup=make backup

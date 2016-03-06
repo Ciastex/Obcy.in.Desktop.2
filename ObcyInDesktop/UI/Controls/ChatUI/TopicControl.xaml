@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="ObcyInDesktop.UI.Controls.ChatUI.TopicControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="clr-namespace:ObcyInDesktop.UI"
+             Width="Auto"
+             Height="Auto"
+             Padding="0,0,0,4">
+    <Border Name="MainGrid" Background="{x:Static ui:Colors.TopicMessageBackgroundBrush}" BorderBrush="{x:Static ui:Colors.TopicMessageBorderBrush}" BorderThickness="1">
+        <Grid>
+            <TextBlock Name="TopicTitleTextBlock"
+                       Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=TopicControl_NewTopicReceived}" 
+                       Margin="4,2,0,0" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top"
+                       TextWrapping="NoWrap"
+                       TextTrimming="CharacterEllipsis"
+                       Foreground="{x:Static ui:Colors.ActiveFontBrush}"
+                       FontSize="13"/>
+
+            <TextBlock Name="TopicBodyTextBlock"
+                   Text="lorem ipsum dolor sit amet consectetur adipisici elit" 
+                   Margin="4,20,4,5" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Bottom"
+                   Foreground="{x:Static ui:Colors.ActiveFontBrush}"
+                   FontSize="12"
+                   TextWrapping="Wrap"/>
+        </Grid>
+    </Border>
+</UserControl>

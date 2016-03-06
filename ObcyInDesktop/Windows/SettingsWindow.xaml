@@ -1,0 +1,111 @@
+﻿<Window x:Class="ObcyInDesktop.Windows.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:ObcyInDesktop.UI"
+        Height="318" Width="432" MinHeight="285" MinWidth="432" MaxHeight="320" MaxWidth="432"
+        ResizeMode="NoResize"
+        Style="{DynamicResource WindowDefaultStyle}"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Activated="SettingsWindow_OnActivated"
+        Deactivated="SettingsWindow_OnDeactivated"
+        Loaded="SettingsWindow_OnLoaded">
+
+    <Border x:Name="WindowBorder"
+            BorderBrush="{x:Static ui:Colors.WindowActiveBorderBrush}" 
+            Background="{x:Static ui:Colors.WindowBackgroundBrush}" 
+            BorderThickness="1" 
+            Margin="5">
+        <Border.Effect>
+            <DropShadowEffect x:Name="BorderGlow" 
+                              Color="{DynamicResource {x:Static ui:Colors.WindowActiveGlow}}" 
+                              Direction="0" ShadowDepth="0" 
+                              BlurRadius="5"/>
+        </Border.Effect>
+        <Grid>
+            <GroupBox Header="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_GroupBox_Behavior}" HorizontalAlignment="Left" Margin="5,29,0,0" VerticalAlignment="Top" Height="125" Width="224">
+                <Grid>
+                    <CheckBox x:Name="SendSexQueryCheckBox" 
+                              Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_CheckBox_SendSexQueryOnStart}" 
+                              HorizontalAlignment="Left" 
+                              VerticalAlignment="Top" 
+                              Margin="2,-3,0,0"
+                              Checked="SendSexQueryCheckBox_OnChecked"
+                              Unchecked="SendSexQueryCheckBox_OnUnchecked"/>
+                    <CheckBox x:Name="StartupWithSystemCheckBox" 
+                              Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_CheckBox_StartupWithSystem}" 
+                              HorizontalAlignment="Left" 
+                              VerticalAlignment="Top" 
+                              Margin="2,16,0,0"
+                              Checked="StartupWithSystemCheckBox_OnChecked"
+                              Unchecked="StartupWithSystemCheckBox_OnUnchecked"/>
+                    <CheckBox x:Name="SendUserAgentCheckBox" 
+                              Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_CheckBox_SendUserAgent}" 
+                              HorizontalAlignment="Left" 
+                              VerticalAlignment="Top" 
+                              Margin="2,35,0,0"
+                              Checked="SendUserAgentCheckBox_OnChecked"
+                              Unchecked="SendUserAgentCheckBox_OnUnchecked"/>
+                    <CheckBox x:Name="SendChatstateCheckBox" 
+                              Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_CheckBox_SendChatstate}" 
+                              HorizontalAlignment="Left" 
+                              VerticalAlignment="Top" 
+                              Margin="2,54,0,0"
+                              Checked="SendChatstateCheckBox_OnChecked"
+                              Unchecked="SendChatstateCheckBox_OnUnchecked"/>
+                    <CheckBox x:Name="ToggleCopyViewOnDoubleClickCheckBox" 
+                              Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_CheckBox_ToggleCopyViewOnDoubleClick}" 
+                              HorizontalAlignment="Left" 
+                              VerticalAlignment="Top" 
+                              Margin="2,73,0,0"
+                              Checked="ToggleCopyViewOnDoubleClickCheckBox_OnChecked"
+                              Unchecked="ToggleCopyViewOnDoubleClickCheckBox_OnUnchecked"/>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_GroupBox_Appearance}" HorizontalAlignment="Left" Margin="5,159,0,0" VerticalAlignment="Top" Height="114" Width="410">
+                <Grid>
+                    <ComboBox Name="ColorSchemeComboBox" HorizontalAlignment="Left" Margin="1,15,0,0" VerticalAlignment="Top" Width="194" SelectionChanged="ColorSchemeComboBox_OnSelectionChanged"/>
+                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Height="Auto" Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_Label_ColorScheme}" Margin="2,-5,0,0"/>
+
+                    <CheckBox Name="UpperCaseMenuHeaderCheckBox" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_CheckBox_UppercaseMenuHeaders}" Margin="1,43,0,0" Width="194" 
+                              Checked="UpperCaseMenuHeaderCheckBox_OnChecked"
+                              Unchecked="UpperCaseMenuHeaderCheckBox_OnUnchecked"/>
+                    <CheckBox Name="MessageMarginsCheckBox" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_CheckBox_MessageMargins}" Margin="1,63,0,0" Width="194" 
+                              Checked="MessageMarginsCheckBox_OnChecked"
+                              Unchecked="MessageMarginsCheckBox_OnUnchecked"/>
+                </Grid>
+            </GroupBox>
+
+            <TextBlock HorizontalAlignment="Left" Margin="235,28,0,0" TextWrapping="Wrap" Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_Label_Language}" VerticalAlignment="Top"/>
+            <ComboBox x:Name="LanguageSelectComboBox" HorizontalAlignment="Right" VerticalAlignment="Top" Width="181" Margin="0,45,5,0" SelectionChanged="LanguageSelectComboBox_OnSelectionChanged"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="235,72,0,0" TextWrapping="Wrap" Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_Label_Location}" VerticalAlignment="Top"/>
+            <ComboBox x:Name="VoivodeshipSelectComboBox" HorizontalAlignment="Right" VerticalAlignment="Top" Width="181" Margin="0,89,5,0" SelectionChanged="VoivodeshipSelectComboBox_OnSelectionChanged">
+                <ComboBoxItem Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_Label_Location_WholePoland}"/>
+                <ComboBoxItem Content="Podlaskie"/>
+                <ComboBoxItem Content="Dolnośląskie"/>
+                <ComboBoxItem Content="Podkarpackie"/>
+                <ComboBoxItem Content="Kujawsko-Pomorskie"/>
+                <ComboBoxItem Content="Pomorskie"/>
+                <ComboBoxItem Content="Lubelskie"/>
+                <ComboBoxItem Content="Śląskie"/>
+                <ComboBoxItem Content="Lubuskie"/>
+                <ComboBoxItem Content="Świętokrzyskie"/>
+                <ComboBoxItem Content="Łódzkie"/>
+                <ComboBoxItem Content="Warmińsko-Mazurskie"/>
+                <ComboBoxItem Content="Małopolskie"/>
+                <ComboBoxItem Content="Wielkopolskie"/>
+                <ComboBoxItem Content="Mazowieckie"/>
+                <ComboBoxItem Content="Zachodniopomorskie"/>
+                <ComboBoxItem Content="Opolskie"/>
+                <ComboBoxItem Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_Label_Location_OutsidePoland}"/>
+            </ComboBox>
+
+            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Height="23" Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_Button_ClearArchive}" Margin="239,131,0,0" Click="ClearArchiveButton_Click"/>
+            <Button VerticalAlignment="Top" Height="23" Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_Button_ClearStatistics}" Margin="328,131,10,0" Click="ClearStatisticsButton_Click"/>
+            <TextBlock HorizontalAlignment="Left" Margin="235,114,3,0" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_Label_StorageManagement}" VerticalAlignment="Top"/>
+            <Button Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=SettingsWindow_Button_Accept}" Height="23" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="74" Click="AcceptButton_Click"/>
+        </Grid>
+    </Border>
+</Window>

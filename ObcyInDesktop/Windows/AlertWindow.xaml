@@ -1,0 +1,34 @@
+﻿<Window x:Class="ObcyInDesktop.Windows.AlertWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:ObcyInDesktop.UI"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Style="{DynamicResource WindowDefaultStyle}"
+        Title="AlertWindow"         
+        Height="120" Width="280"
+        MaxHeight="120" MaxWidth="280"
+        MinHeight="120" MinWidth="280"
+        Activated="AlertWindow_OnActivated"
+        Deactivated="AlertWindow_OnDeactivated">
+    <Border x:Name="WindowBorder"
+            BorderBrush="{x:Static ui:Colors.WindowActiveBorderBrush}" 
+            Background="{x:Static ui:Colors.WindowBackgroundBrush}" 
+            BorderThickness="1" 
+            Margin="5">
+        <Border.Effect>
+            <DropShadowEffect x:Name="BorderGlow" 
+                              Color="{x:Static ui:Colors.WindowActiveGlow}" 
+                              Direction="0" ShadowDepth="0" 
+                              BlurRadius="5"/>
+        </Border.Effect>
+
+        <Grid>
+            <Button Name="AcceptButton" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                    Width="60" Height="24" Margin="0,78,0,0"
+                    Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AlertWindow_OK}"
+                    IsCancel="False" IsDefault="True" Click="AcceptButton_Click"/>
+            <TextBlock Name="MessageTextBlock" HorizontalAlignment="Left" Margin="7,31,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" Height="40"/>
+        </Grid>
+    </Border>
+</Window>

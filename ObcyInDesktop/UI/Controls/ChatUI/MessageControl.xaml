@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="ObcyInDesktop.UI.Controls.ChatUI.MessageControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="clr-namespace:ObcyInDesktop.UI"
+             Width="Auto"
+             Height="Auto"
+             Padding="0,0,0,4">
+    <Border Name="MainGrid" Background="{x:Static ui:Colors.IncomingMessageBackgroundBrush}" BorderBrush="{x:Static ui:Colors.IncomingMessageBorderBrush}" BorderThickness="1">
+        <Grid>
+            <TextBlock Name="SenderTextBlock"
+                   Text="sender" 
+                   Margin="4,2,0,0" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top"
+                   Foreground="{x:Static ui:Colors.ActiveFontBrush}"
+                   FontSize="13"/>
+
+            <TextBlock Name="TimeTextBlock"
+                   Text="00:00:00" 
+                   Margin="0,2,4,0" 
+                   HorizontalAlignment="Right" 
+                   VerticalAlignment="Top"
+                   Foreground="{x:Static ui:Colors.ActiveFontBrush}"/>
+
+            <TextBlock Name="MessageTextBlock"
+                   Text="lorem ipsum dolor sit amet consectetur adipisici elit" 
+                   Margin="4,20,4,5" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Bottom"
+                   Foreground="{x:Static ui:Colors.ActiveFontBrush}"
+                   FontSize="12"
+                   TextWrapping="Wrap"/>
+        </Grid>
+    </Border>
+</UserControl>

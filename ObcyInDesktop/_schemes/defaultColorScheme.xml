@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ColorScheme Name="Obcy.in Desktop Standard">
+  <UsesDarkIconTheme />
+  
+  <Color Key="WindowBackground" Value="FFFFFF"/>
+  <Color Key="WindowActiveBorder" Value="007BDA"/>
+  <Color Key="WindowActiveGlow" Value="007BDA"/>
+  <Color Key="WindowInactiveBorder" Value="0E0E0E"/>
+  <Color Key="WindowInactiveGlow" Value="000000"/>
+  <Color Key="WindowSeparator" Value="DADBDC"/>
+  
+  <Color Key="CaptionButtonIdle" Value="000000"/>
+  <Color Key="CaptionButtonHover" Value="777777"/>
+  <Color Key="PanelHideButtonIdle" Value="A0A0A0"/>
+  <Color Key="PanelHideButtonHover" Value="C0C0C0"/>
+  
+  <Color Key="MainMenuButtonIdle" Value="007BDA"/>
+  <Color Key="MainMenuButtonHover" Value="1979CA"/>
+  
+  <Color Key="IncomingMessageBackground" Value="4C8CCB"/>
+  <Color Key="IncomingMessageBorder" Value="4C8CCB"/>
+  <Color Key="OutgoingMessageBackground" Value="3F9BF6"/>
+  <Color Key="OutgoingMessageBorder" Value="3F9BF6"/>
+  <Color Key="TopicMessageBackground" Value="4C8CCB"/>
+  <Color Key="TopicMessageBorder" Value="4C8CCB"/>
+  
+  <Color Key="ToggleButtonHover" Value="F0F0F0"/>
+  <Color Key="ToggleButtonIdle" Value="FFFFFF"/>
+  <Color Key="ToggleButtonChecked" Value="E5E5E5"/>
+  
+  <Color Key="GroupBoxBorder" Value="218BE4"/>
+  
+  <Color Key="TextBoxBackground" Value="FFFFFF"/>
+  <Color Key="TextBoxForeground" Value="000000"/>
+  <Color Key="TextBoxBorder" Value="4C8CCB"/>
+  <Color Key="TextBoxDisabled" Value="EDEDED"/>
+  <Color Key="TextBoxReadOnly" Value="F5F5F5"/>
+  
+  <Color Key="CheckBoxBorderIdle" Value="AFAFAF"/>
+  <Color Key="CheckBoxBorderHover" Value="4C8CCB"/>
+  <Color Key="CheckBoxFill" Value="4C8CCB"/>
+  
+  <Color Key="ControlIdleBorder" Value="AFAFAF"/>
+  <Color Key="ControlHoverBorder" Value="4C8CCB"/>
+  <Color Key="ControlDisabled" Value="DEDEDE"/>
+  
+  <Color Key="ToolTipBackground" Value="FFFFFF"/>
+  <Color Key="ToolTipBorder" Value="F0F0F0"/>
+  
+  <Color Key="ButtonIdleBackground" Value="FFFFFF"/>
+  <Color Key="ButtonIdleBorder" Value="1979CA"/>
+  <Color Key="ButtonHoverBackground" Value="1979CA"/>
+  <Color Key="ButtonHoverBorder" Value="1979CA"/>
+  <Color Key="ButtonClickBackground" Value="588FC5"/>
+  <Color Key="ButtonClickBorder" Value="1979CA"/>
+  
+  <Color Key="ScrollBarIdleForeground" Value="BFBFBF"/>
+  <Color Key="ScrollBarHoverForeground" Value="ADADAD"/>
+  <Color Key="ScrollBarClickForeground" Value="666666"/>
+  
+  <Color Key="WindowFont" Value="000000"/>
+  <Color Key="AccentedFont" Value="1979CA"/>
+  <Color Key="ActiveFont" Value="FFFFFF"/>
+  <Color Key="MildFont" Value="ABABAB"/>
+  <Color Key="MenuHeaderFont" Value="000000"/>
+  <Color Key="MenuItemFont" Value="000000"/>
+  <Color Key="TextBlockFont" Value="000000"/>
+  <Color Key="ButtonFont" Value="1979CA"/>
+  <Color Key="ToolTipFont" Value="000000"/>
+  <Color Key="ListBoxItemInactiveFont" Value="000000"/>
+  <Color Key="ListBoxItemActiveFont" Value="FFFFFF"/>
+
+
+  <Color Key="MenuHighlight" Value="DEDEDE"/>
+  <Color Key="MenuBackground" Value="FFFFFF"/>
+  <Color Key="MenuBorder" Value="A0A0A0"/>
+  
+  <Color Key="ComboBoxDropdownArrow" Value="666666"/>
+
+  <Color Key="ListBoxBorder" Value="DADBDC"/>
+  <Color Key="ListBoxBackground" Value="FFFFFF"/>
+  <Color Key="ListBoxItemHoverBackground" Value="1979CA"/>
+  <Color Key="ListBoxItemActiveSelectionBackground" Value="1979CA"/>
+  <Color Key="ListBoxItemInactiveSelectionBackground" Value="DEDEDE"/>
+</ColorScheme>

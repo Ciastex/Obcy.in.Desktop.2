@@ -1,0 +1,118 @@
+# Menu related strings
+Menu_File=Plik
+Menu_File_Archives=Archiwum
+Menu_File_Exit=Wyjście
+
+Menu_Options=Opcje
+Menu_Options_Settings=Ustawienia
+
+Menu_View=Widok
+Menu_View_ToggleToolbar=Przełącz pasek narzędzi
+Menu_View_ToggleCopyView=Przełącz tryb kopiowania
+Menu_View_AboutThisApplication=O tej aplikacji
+
+# Toolbar related strings
+ToolBar_CopyViewToggleButton_ToolTip=Przełącza tryb kopiowania (Ctrl+D)
+ToolBar_ScrollToggleButton_ToolTip=Przełącza automatyczne przewijanie okna rozmowy (Ctrl+H)
+ToolBar_ClearLogButton_ToolTip=Czyści okno rozmowy (Ctrl+L)
+ToolBar_FlagStrangerButton_ToolTip=Oznacza obcego jako nieprzyjemnego (Ctrl+F)
+ToolBar_RequestRandomTopicButton_Tooltip=Generuje losowy temat do dyskusji (Ctrl+T)
+ToolBar_DisconnectStrangerButton_ToolTip=Rozłącza z obecnie podłączonym obcym (Podwójny Escape)
+ToolBar_SearchForStrangerButton_ToolTip=Szuka nowego rozmówcy (Escape)
+
+# Status indicator related strings
+StatusIndicator_ConnectedToServer=podłączono do serwera
+StatusIndicator_ConnectionFailure=błąd połączenia
+StatusIndicator_ServerClosedConnection=serwer się rozłączył
+StatusIndicator_StrangerIdle=obcy nie pisze
+StatusIndicator_StrangerTyping=obcy pisze
+
+# Message control related strings
+MessageControl_Sender_You=ty
+MessageControl_Sender_Stranger=obcy
+
+# Topic control related strings
+TopicControl_NewTopicReceived=nowy temat rozmowy
+
+# Presence control related strings
+PresenceControl_ConversationStarted=rozmowa rozpoczęta
+PresenceControl_ConversationEnded=rozmowa zakończona
+
+# Left panel related strings
+LeftPanel_StartConversationButton=zacznij rozmowę
+LeftPanel_EndConversationButton=zakończ rozmowę
+LeftPanel_SureAboutDisconnect=na pewno?
+LeftPanel_PeopleCountIndicator={0} osób online
+LeftPanel_PeopleCountIndicatorChecking=sprawdzam ilość ludzi...
+
+# Left panel statistics related strings
+LeftPanel_CurrentConversationTime=aktualny czas rozmowy:
+LeftPanel_BestConversationTime=najlepszy czas rozmowy:
+LeftPanel_TotalConversationCount=całkowita liczba rozmów:
+LeftPanel_TotalKilometersCount=całkowita liczba kilometrów:
+LeftPanel_TotalMessagesReceivedCount=ilość otrzymanych wiadomości:
+LeftPanel_TotalMessagesSentCount=ilość wysłanych wiadomości:
+
+# Window titles
+Window_Settings=Ustawienia
+
+# Debugging window related strings
+DebugWindow_Title=Debugowanie
+DebugWindow_InsertTemplate=wstaw szablon
+DebugWindow_ManualOverride=ręczne tworzenie pakietów
+
+# Settings window related strings
+SettingsWindow_Title=Ustawienia
+SettingsWindow_GroupBox_Behavior=zachowanie aplikacji
+SettingsWindow_CheckBox_SendSexQueryOnStart=Pytaj o płeć na starcie rozmowy
+SettingsWindow_CheckBox_StartupWithSystem=Uruchom razem z systemem
+SettingsWindow_CheckBox_SendUserAgent=Wyślij UserAgent do serwera
+SettingsWindow_CheckBox_SendChatstate=Wysyłaj powiadomienie o pisaniu
+SettingsWindow_CheckBox_ToggleCopyViewOnDoubleClick=Tryb kopiowania po dwukliku na log
+SettingsWindow_CheckBox_UppercaseMenuHeaders=Nagłówki menu z dużej litery
+SettingsWindow_CheckBox_MessageMargins=Wcięcia widoku wiadomości
+
+SettingsWindow_GroupBox_Appearance=wygląd aplikacji
+SettingsWindow_Label_ColorScheme=schemat kolorów (wymagany restart)
+
+SettingsWindow_Label_Language=wybierz język (wymagany restart)
+SettingsWindow_Label_Location=wybierz województwo
+SettingsWindow_Label_StorageManagement=zarządzanie danymi
+
+SettingsWindow_Label_Location_WholePoland=Cała Polska
+SettingsWindow_Label_Location_OutsidePoland=Poza Polską
+SettingsWindow_Button_ClearArchive=Czyść archiwa
+SettingsWindow_Button_ClearStatistics=Zeruj statystyki
+
+SettingsWindow_Button_Accept=OK
+
+# About window related strings
+AboutWindow_Title=O tej aplikacji
+AboutWindow_IronicText=prawdopodobnie żaden obcy nie ucierpiał podczas tworzenia tego komunikatora internetowego
+AboutWindow_SpecialThanksShow=zobacz podziękowania
+AboutWindow_License=obowiązuje licencja MIT
+
+AboutWindow_EarlyTesting=testowanie wczesnych wersji
+AboutWindow_ForHer=bycie moją siłą napędową i motywacja
+AboutWindow_UltimateBreaker=psucie wszystkiego, co się da, w tej aplikacji
+
+# Choice window related strings
+ChoiceWindow_Title=Na pewno?
+ChoiceWindow_Yes=Tak
+ChoiceWindow_No=Nie
+
+ChoiceWindow_StatisticsEraseWarning=Na pewno chcesz wymazać swoje statystyki? To jest nieodwracalne!
+ChoiceWindow_ArchiveEraseWarning=Na pewno chcesz wymazać całą historię rozmów? Tego nie da się odzyskać!
+
+# Alert window related strings
+AlertWindow_Title=Uwaga
+AlertWindow_IDontThinkSo=Będzie zaimplementowane w przyszłości
+AlertWindow_ArchiveExported=Archiwum wyeksportowano do pliku tekstowego
+AlertWindow_NoWriteAccess=Nie masz praw zapisu w folderze, gdzie znajduje się aplikacja. Archiwum i ustawienia nie zostaną zapisane.
+AlertWindow_ArchiveLoadFailed=Archiwum uległo uszkodzeniu, zostanie usunięte. Przykro mi z tego powodu bardziej niż Tobie.
+AlertWindow_OK=OK
+
+# Archive window related strings
+ArchiveWindow_Title=Archiwum
+ArchiveWindow_ExportToText=eksport jako tekst
+ArchiveWindow_MakeBackup=kopia zapasowa

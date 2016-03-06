@@ -1,0 +1,120 @@
+﻿<Window x:Class="ObcyInDesktop.Windows.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:ui="clr-namespace:ObcyInDesktop.UI"
+        Height="160" Width="310"
+        MaxHeight="160" MaxWidth="310"
+        MinHeight="160" MinWidth="310"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Style="{DynamicResource WindowDefaultStyle}"
+        Activated="AboutWindow_OnActivated"
+        Deactivated="AboutWindow_OnDeactivated">
+    <Border x:Name="WindowBorder"
+            BorderBrush="{x:Static ui:Colors.WindowActiveBorderBrush}" 
+            Background="{x:Static ui:Colors.WindowBackgroundBrush}" 
+            BorderThickness="1" 
+            Margin="5">
+        <Border.Effect>
+            <DropShadowEffect x:Name="BorderGlow" 
+                              Color="{x:Static ui:Colors.WindowActiveGlow}" 
+                              Direction="0" ShadowDepth="0" 
+                              BlurRadius="5"/>
+        </Border.Effect>
+
+        <Grid>
+            <Image Source="pack://application:,,,/Resources/Graphics/About/ciastek_logo.png" 
+                   Width="150" Height="150" 
+                   SnapsToDevicePixels="True"
+                   Opacity="0.1"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom" Margin="0,0,0,-5"/>
+
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="Obcy.in Desktop" Margin="6,32,0,0"
+                       FontFamily="Segoe UI" FontSize="18"
+                       Foreground="{x:Static ui:Colors.AccentedFontBrush}"/>
+            <TextBlock x:Name="VersionNumberTextBlock"
+                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text=" {0}.{1}.{2}.{3}" Margin="135,32,0,0"
+                       FontFamily="Segoe UI" FontSize="10"
+                       Foreground="{x:Static ui:Colors.MildFontBrush}"/>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AboutWindow_IronicText}" Margin="5,59,0,0"
+                       TextWrapping="Wrap"
+                       FontFamily="Segoe UI"
+                       Foreground="{x:Static ui:Colors.WindowFontBrush}"/>
+
+            <Grid x:Name="SpecialThanksGrid" 
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                  Margin="6,90,6,50"
+                  Visibility="Collapsed"
+                  Opacity="0">
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="Ania Pochodaj" Margin="0,6,0,0"
+                       FontFamily="Segoe UI" FontSize="14"
+                       Foreground="{x:Static ui:Colors.AccentedFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AboutWindow_ForHer}" Margin="0,23,0,0"
+                       FontFamily="Segoe UI" FontSize="12"
+                       Foreground="{x:Static ui:Colors.MildFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="Dominik Dziki" Margin="0,41,0,0"
+                       FontFamily="Segoe UI" FontSize="14"
+                       Foreground="{x:Static ui:Colors.AccentedFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AboutWindow_EarlyTesting}" Margin="0,58,0,0"
+                       FontFamily="Segoe UI" FontSize="12"
+                       Foreground="{x:Static ui:Colors.MildFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="Kacper Czochara" Margin="0,76,0,0"
+                       FontFamily="Segoe UI" FontSize="14"
+                       Foreground="{x:Static ui:Colors.AccentedFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AboutWindow_EarlyTesting}" Margin="0,93,0,0"
+                       FontFamily="Segoe UI" FontSize="12"
+                       Foreground="{x:Static ui:Colors.MildFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="Kacper Donat" Margin="0,111,0,0"
+                       FontFamily="Segoe UI" FontSize="14"
+                       Foreground="{x:Static ui:Colors.AccentedFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AboutWindow_EarlyTesting}" Margin="0,128,0,0"
+                       FontFamily="Segoe UI" FontSize="12"
+                       Foreground="{x:Static ui:Colors.MildFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="Maciek Janiszewski" Margin="0,146,0,0"
+                       FontFamily="Segoe UI" FontSize="14"
+                       Foreground="{x:Static ui:Colors.AccentedFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AboutWindow_UltimateBreaker}" Margin="0,163,0,0"
+                       FontFamily="Segoe UI" FontSize="12"
+                       Foreground="{x:Static ui:Colors.MildFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="Szymon Szczyrbak" Margin="0,180,0,0"
+                       FontFamily="Segoe UI" FontSize="14"
+                       Foreground="{x:Static ui:Colors.AccentedFontBrush}"/>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AboutWindow_EarlyTesting}" Margin="0,197,0,0"
+                       FontFamily="Segoe UI" FontSize="12"
+                       Foreground="{x:Static ui:Colors.MildFontBrush}"/>
+            </Grid>
+
+            <Button x:Name="ShowSpecialThanksButton"
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                    Width="124" Height="24" Margin="10,0,0,21" 
+                    Content="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AboutWindow_SpecialThanksShow}"
+                    Click="ShowSpecialThanksButton_OnClick"/>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                       Text="copyright © 2015 ciastek," Margin="5,0,0,4"
+                       TextWrapping="Wrap"
+                       FontFamily="Segoe UI"
+                       Foreground="{x:Static ui:Colors.WindowFontBrush}"/>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                       Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=AboutWindow_License}" Margin="143,0,0,4"
+                       TextWrapping="Wrap"
+                       FontFamily="Segoe UI"
+                       Foreground="{x:Static ui:Colors.WindowFontBrush}"/>
+        </Grid>
+    </Border>
+</Window>

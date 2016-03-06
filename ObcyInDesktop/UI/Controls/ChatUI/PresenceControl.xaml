@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="ObcyInDesktop.UI.Controls.ChatUI.PresenceControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="clr-namespace:ObcyInDesktop.UI"
+             Height="Auto"
+             Width="Auto">
+    <Grid>
+        <TextBlock x:Name="PresenceTextBlock" Foreground="{x:Static ui:Colors.MildFontBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4,0,4,2" Text="searching for a stranger..."/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,191 @@
+﻿<UserControl x:Class="ObcyInDesktop.UI.Controls.ChatUI.ToolbarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="clr-namespace:ObcyInDesktop.UI"
+             xmlns:commands="clr-namespace:ObcyInDesktop.UI.Commands"
+             xmlns:chatUI="clr-namespace:ObcyInDesktop.UI.Controls.ChatUI"
+             Width="Auto"
+             Height="24">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid x:Name="Chrome" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                <ContentPresenter x:Name="InnerContent"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              Margin="{TemplateBinding Padding}"/>
+                            </Grid>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" TargetName="Chrome">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="{x:Static ui:Colors.ToggleButtonHover}"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" Value="0.4" TargetName="InnerContent"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type ToggleButton}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                            <Grid x:Name="Chrome" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"/>
+                            </Grid>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" TargetName="Chrome">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="{x:Static ui:Colors.ToggleButtonHover}"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter Property="Background" TargetName="Chrome">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="{x:Static ui:Colors.ToggleButtonChecked}"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <StackPanel Margin="0,0,0,0" Orientation="Horizontal">
+            <ToggleButton x:Name="CopyViewToggleButton" 
+                          Height="24" 
+                          Width="24"
+                          Background="{x:Static ui:Colors.ToggleButtonIdleBrush}"
+                          Command="{x:Static commands:ChatViewCommands.ToggleCopyViewCommand}"
+                          CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=chatUI:ChatView}}"
+                          ToolTip="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=ToolBar_CopyViewToggleButton_ToolTip}">
+                <Image Source="pack://application:,,,/Resources/Graphics/Toolbar/Light/ChatLog.png" 
+                       Height="16" Width="16"  
+                       HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       SnapsToDevicePixels="True" />
+            </ToggleButton>
+
+            <ToggleButton x:Name="LogScrollingToggleButton" 
+                          Height="24" 
+                          Width="24" 
+                          Margin="1,0,0,0" 
+                          Background="{x:Static ui:Colors.ToggleButtonIdleBrush}"
+                          Command="{x:Static commands:ChatViewCommands.ToggleLogScrollingCommand}"
+                          CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=chatUI:ChatView}}"
+                          ToolTip="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=ToolBar_ScrollToggleButton_ToolTip}">
+                <Image Source="pack://application:,,,/Resources/Graphics/Toolbar/Light/ScrollStop.png"
+                       Height="16" Width="16" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       SnapsToDevicePixels="True" />
+            </ToggleButton>
+
+            <Button x:Name="ClearLogButton" 
+                    Height="24" 
+                    Width="24" 
+                    Margin="1,0,0,0" 
+                    Background="{x:Static ui:Colors.ToggleButtonIdleBrush}"
+                    Command="{x:Static commands:ChatViewCommands.ClearLogCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=chatUI:ChatView}}"
+                    ToolTip="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=ToolBar_ClearLogButton_ToolTip}">
+                <Image Source="pack://application:,,,/Resources/Graphics/Toolbar/Light/EraseLog.png"
+                       Height="16" Width="16" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       SnapsToDevicePixels="True" />
+            </Button>
+
+            <Button x:Name="FlagStrangerButton" 
+                    Height="24" 
+                    Width="24" 
+                    Margin="1,0,0,0" 
+                    Background="{x:Static ui:Colors.ToggleButtonIdleBrush}"
+                    IsEnabled="False"
+                    Command="{x:Static commands:ChatViewCommands.FlagStranger}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=chatUI:ChatView}}"
+                    ToolTip="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=ToolBar_FlagStrangerButton_ToolTip}">
+                <Image Source="pack://application:,,,/Resources/Graphics/Toolbar/Light/FlagStranger.png"
+                       Height="16" Width="16" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       SnapsToDevicePixels="True" />
+            </Button>
+            
+            <Button x:Name="RequestRandomTopicButton"
+                    Height="24"
+                    Width="24"
+                    Margin="1,0,0,0"
+                    Background="{x:Static ui:Colors.ToggleButtonIdleBrush}"
+                    IsEnabled="False"
+                    Command="{x:Static commands:ChatViewCommands.RequestRandomTopicCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=chatUI:ChatView}}"
+                    ToolTip="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=ToolBar_RequestRandomTopicButton_Tooltip}">
+                <Image Source="pack://application:,,,/Resources/Graphics/Toolbar/Light/RandomTopic.png"
+                       Height="16" Width="16" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       SnapsToDevicePixels="True" />
+            </Button>
+            
+            <Button x:Name="DisconnectFromStrangerButton"
+                    Height="24" 
+                    Width="24"
+                    Margin="1,0,0,0" 
+                    Background="{x:Static ui:Colors.ToggleButtonIdleBrush}"
+                    Command="{x:Static commands:ChatViewCommands.DisconnectFromStrangerCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=chatUI:ChatView}}"
+                    ToolTip="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=ToolBar_DisconnectStrangerButton_ToolTip}"
+                    IsEnabled="False">
+                <Image Source="pack://application:,,,/Resources/Graphics/Toolbar/DisconnectStranger.png"
+                       Height="16" Width="16" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       SnapsToDevicePixels="True" />
+            </Button>
+            
+            <Button x:Name="SearchForStrangerButton"
+                    Height="24" 
+                    Width="24" 
+                    Margin="1,0,0,0" 
+                    Background="{x:Static ui:Colors.ToggleButtonIdleBrush}"
+                    Command="{x:Static commands:ChatViewCommands.SearchForStrangerCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=chatUI:ChatView}}"
+                    ToolTip="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=ToolBar_SearchForStrangerButton_ToolTip}">
+                <Image Source="pack://application:,,,/Resources/Graphics/Toolbar/NewStranger.png"
+                       Height="16" Width="16" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       SnapsToDevicePixels="True" />
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

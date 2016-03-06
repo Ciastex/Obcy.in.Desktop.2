@@ -1,0 +1,114 @@
+# Menu related strings
+Menu_File=Bundle
+Menu_File_Archives=Cap'n Log
+Menu_File_Exit=Belay
+
+Menu_Options=Methods
+Menu_Options_Settings=Settn's
+
+Menu_View=View
+Menu_View_ToggleToolbar=Switch yer Bandolierrrr
+Menu_View_ToggleCopyView=Switch yer Copypasta
+Menu_View_AboutThisApplication='bout 'tis Ship
+
+# Toolbar related strings
+ToolBar_CopyViewToggleButton_ToolTip=switch yer Copypasta (Ctrl+D)
+ToolBar_ScrollToggleButton_ToolTip=switch Cap'n Log forwardin' (Ctrl+H)
+ToolBar_ClearLogButton_ToolTip=burn yer Scratches (Ctrl+L)
+ToolBar_FlagStrangerButton_ToolTip=mark currrrrent landlubber as a scurvy dog (Ctrl+F)
+ToolBar_RequestRandomTopicButton_Tooltip=talk 'bout some random stuff (Ctrl+T)
+ToolBar_DisconnectStrangerButton_ToolTip=toss currrrrent landlubber overboard (Double-Escape)
+ToolBar_SearchForStrangerButton_ToolTip=Sail for a new landlubber (Escape)
+
+# Status indicator related strings
+StatusIndicator_ConnectedToServer=Ship's at the Port
+StatusIndicator_ConnectionFailure=Ship's sunk'n
+StatusIndicator_ServerClosedConnection=Port's burn'd
+StatusIndicator_StrangerIdle=landlubber's sittin'
+StatusIndicator_StrangerTyping=landlubber's babblin'
+
+# Message control related strings
+MessageControl_Sender_You=Ya
+MessageControl_Sender_Stranger=landlubber
+
+# Topic control related strings
+TopicControl_NewTopicReceived=yer new random stuff to talk 'bout
+
+# Presence control related strings
+PresenceControl_ConversationStarted=babblin' begins
+PresenceControl_ConversationEnded=babblin' ends
+
+# Left panel related strings
+LeftPanel_StartConversationButton=new babblin'
+LeftPanel_EndConversationButton=end babblin'
+LeftPanel_SureAboutDisconnect=ye cert'n?
+LeftPanel_PeopleCountIndicator={0} people babblin' now
+LeftPanel_PeopleCountIndicatorChecking=lookin' at the Port
+
+# Left panel statistics related strings
+LeftPanel_CurrentConversationTime=currrrrent babblin' time:
+LeftPanel_BestConversationTime=best babblin' time:
+LeftPanel_TotalConversationCount=total babblin' count:
+LeftPanel_TotalKilometersCount=total miles sail'd:
+LeftPanel_TotalMessagesReceivedCount=total babbles received:
+LeftPanel_TotalMessagesSentCount=total babbles told:
+
+# Debugging window related strings
+DebugWindow_Title=Debugging
+DebugWindow_InsertTemplate=insert template
+DebugWindow_ManualOverride=manual packet creation
+
+# Settings window related strings
+SettingsWindow_Title=Methods
+SettingsWindow_GroupBox_Behavior=yer Ship's steerin'
+SettingsWindow_CheckBox_SendSexQueryOnStart=ye want ta know yer landlubber first?
+SettingsWindow_CheckBox_StartupWithSystem=bring onboard
+SettingsWindow_CheckBox_SendUserAgent=tell yer name to tharr spies
+SettingsWindow_CheckBox_SendChatstate=tell ye babblin'
+SettingsWindow_CheckBox_ToggleCopyViewOnDoubleClick=switch yer copypasta on double-click
+SettingsWindow_CheckBox_UppercaseMenuHeaders=SCREAMING MENUS
+SettingsWindow_CheckBox_MessageMargins=babblin' rectangle margins
+
+SettingsWindow_GroupBox_Appearance=look 'o yer Ship
+SettingsWindow_Label_ColorScheme=yer paint (needs leavin' board)
+
+SettingsWindow_Label_Language=yer lingo (needs leavin' board)
+SettingsWindow_Label_Location=yer province
+SettingsWindow_Label_StorageManagement=magazine Methods
+
+SettingsWindow_Label_Location_WholePoland=Whole Poland
+SettingsWindow_Label_Location_OutsidePoland=Outside Poland
+SettingsWindow_Button_ClearArchive=Burn Cap'n Log
+SettingsWindow_Button_ClearStatistics=Burn yer Stats
+
+SettingsWindow_Button_Accept=Plundered
+
+# About window related strings
+AboutWindow_Title=about 'tis Ship
+AboutWindow_IronicText=no landlubbers were eat'n by sharks durin' buildin' of 'tis Ship
+AboutWindow_SpecialThanksShow=show special greets
+AboutWindow_License=MIT license IS A MUST
+
+AboutWindow_EarlyTesting=Ship's maiden sailin'
+AboutWindow_ForHer=being the wind for 'tis Ship
+AboutWindow_UltimateBreaker=cannonballin' 'tis Ship
+
+# Choice window related strings
+ChoiceWindow_Title=Be ye sure ye wish ta do 'tis?
+ChoiceWindow_Yes=Aye
+ChoiceWindow_No=Nah
+
+ChoiceWindow_StatisticsEraseWarning=Ye cert'n 'bout burnin' yer Stats? Ye can't get 'em back from ashes!
+ChoiceWindow_ArchiveEraseWarning=Ye cert'n 'bout burnin' Cap'n Log? Ye can't get it back from ashes!
+
+# Alert window related strings
+AlertWindow_Title=Watch it!
+AlertWindow_IDontThinkSo=Will be built before next sailin'
+AlertWindow_ArchiveLoadFailed=Cap'n Log was torn apart by wild sharks 'n can't belong to 'tis ship any longerrrrr
+AlertWindow_NoWriteAccess=Ye can't 'rite to currrrrrent Ship's folderrrrrr! Cap'n Log 'n Methods be lost!
+AlertWindow_OK=Plundered
+
+# Archive window related strings
+ArchiveWindow_Title=Cap'n log
+ArchiveWindow_ExportToText=rewrite as text
+ArchiveWindow_MakeBackup=make ye a copy

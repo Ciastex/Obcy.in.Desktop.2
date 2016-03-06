@@ -1,0 +1,45 @@
+﻿<Window x:Class="ObcyInDesktop.Windows.DebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:ObcyInDesktop.UI"
+        Title="" Height="300" Width="551"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Style="{DynamicResource WindowDefaultStyle}"
+        Activated="DebugWindow_OnActivated"
+        Deactivated="DebugWindow_OnDeactivated">
+    <Border x:Name="WindowBorder"
+            BorderBrush="{x:Static ui:Colors.WindowActiveBorderBrush}" 
+            Background="{x:Static ui:Colors.WindowBackgroundBrush}" 
+            BorderThickness="1" 
+            Margin="5">
+        <Border.Effect>
+            <DropShadowEffect x:Name="BorderGlow" 
+                              Color="{x:Static ui:Colors.WindowActiveGlow}" 
+                              Direction="0" ShadowDepth="0" 
+                              BlurRadius="5"/>
+        </Border.Effect>
+
+        <Grid>
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,25,0,0" Height="Auto" Width="Auto">
+                <TextBlock Name="IsOpenTextBlock" Margin="4,4,0,0" Text="IsOpen: {0}" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Name="IsReadyTextBlock" Margin="4,24,0,0" Text="IsReady: {0}" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Name="IsStrangerConnectedTextBlock" Margin="4,44,0,0" Text="IsStrangerConnected: {0}" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Name="IsSearchingForStrangerTextBlock" Margin="4,64,0,0" Text="IsSearchingForStranger: {0}" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Name="StrangerIdTextBlock" Margin="4,84,0,0" Text="Stranger ID: {0}" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </Grid>
+
+            <TextBox Name="JsonConsoleTextBox" HorizontalAlignment="Stretch" BorderThickness="0,1,0,0" Margin="0,188,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" Width="Auto" FontFamily="Lucida Console" FontSize="12" IsReadOnly="True"/>
+            
+            <TextBlock HorizontalAlignment="Right" Margin="0,139,4,0" TextWrapping="Wrap" VerticalAlignment="Top">
+                <Hyperlink Name="InsertTemplateHyperlink" Click="InsertTemplateHyperlink_OnClick">
+                    <Run Text="{Binding Path=., Converter={StaticResource LocaleConverter}, ConverterParameter=DebugWindow_InsertTemplate}"/>
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Left" Margin="3,139,0,0" TextWrapping="Wrap" Text="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=DebugWindow_ManualOverride}" VerticalAlignment="Top"/>
+
+            <TextBox Name="JsonManualInputTextBox" HorizontalAlignment="Stretch" BorderThickness="0,1,0,1" BorderBrush="#ADADAD" Height="23" Margin="0,159,0,0" TextWrapping="NoWrap" FontFamily="Lucida Console" VerticalAlignment="Top" Width="Auto" KeyDown="JsonManualInputTextBox_OnKeyDown"/>
+        </Grid>
+    </Border>
+</Window>
