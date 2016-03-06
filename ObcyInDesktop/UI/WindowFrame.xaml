@@ -23,71 +23,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
-    <Style x:Key="TogglePanelButtonStyle" BasedOn="{StaticResource CaptionButtonStyle}" TargetType="{x:Type Button}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid Background="{x:Static ui:Colors.WindowBackgroundBrush}">
-                        <Path x:Name="Glyph"
-                            Data="M207.5,239.5 L205.5,243.5 203.5,247.5 205.5,251.5 207.5,255.5 208.5,253.5 207.5,251.5 205.5,247.5 207.5,243.5 208.5,241.5 z" 
-                            Fill="{x:Static ui:Colors.PanelHideButtonIdleBrush}" HorizontalAlignment="Left" Height="10" Stretch="Fill" 
-                            Stroke="{x:Static ui:Colors.PanelHideButtonIdleBrush}" StrokeThickness="1" VerticalAlignment="Top" Width="5"/>
-                    </Grid>
-                    
-                    <ControlTemplate.Triggers>
-                        <EventTrigger RoutedEvent="MouseEnter">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetName="Glyph"
-                                     Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)"
-                                     From="{x:Static ui:Colors.PanelHideButtonIdle}"
-                                     To="{x:Static ui:Colors.PanelHideButtonHover}"
-                                     Duration="0:0:0.2"
-                                     AutoReverse="False"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetName="Glyph"
-                                     Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
-                                     From="{x:Static ui:Colors.PanelHideButtonIdle}"
-                                     To="{x:Static ui:Colors.PanelHideButtonHover}"
-                                     Duration="0:0:0.2"
-                                     AutoReverse="False"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-
-                        <EventTrigger RoutedEvent="MouseLeave">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetName="Glyph"
-                                     Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)"
-                                     From="{x:Static ui:Colors.PanelHideButtonHover}"
-                                     To="{x:Static ui:Colors.PanelHideButtonIdle}"
-                                     Duration="0:0:0.2"
-                                     AutoReverse="False"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Storyboard.TargetName="Glyph"
-                                     Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
-                                     From="{x:Static ui:Colors.PanelHideButtonHover}"
-                                     To="{x:Static ui:Colors.PanelHideButtonIdle}"
-                                     Duration="0:0:0.2"
-                                     AutoReverse="False"/>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
 
     <Style x:Key="CloseCaptionButtonStyle" BasedOn="{StaticResource CaptionButtonStyle}" TargetType="{x:Type Button}">
         <Setter Property="Template">
@@ -258,7 +193,7 @@
                                     VerticalAlignment="Top" 
                                     HorizontalAlignment="Stretch"
                                     Width="Auto" 
-                                    Margin="180,6,6,0" 
+                                    Margin="174,6,6,0" 
                                     Height="Auto" 
                                     BorderBrush="{x:Static ui:Colors.WindowSeparatorBrush}">
                                 <Border.InputBindings>
@@ -270,22 +205,13 @@
                                                   CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
                                 </Border.InputBindings>
                                 <Grid Height="24" VerticalAlignment="Top" Background="Transparent" HorizontalAlignment="Stretch">
-                                    <!--<Button x:Name="HidePanelButton"
-                                            HorizontalAlignment="Left" 
-                                            Height="10" 
-                                            Width="5" 
-                                            Background="{x:Static ui:Colors.WindowBackgroundBrush}"
-                                            Margin="4,0,0,0"
-                                            Style="{StaticResource TogglePanelButtonStyle}"
-                                            Command="{x:Static commands:WindowCommands.TogglePanel}"
-                                            CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>-->
-
-                                    <TextBlock Text="{TemplateBinding Title}"
-                                       HorizontalAlignment="Center"
-                                       VerticalAlignment="Top"
-                                       Margin="0,4,0,0"
-                                       FontSize="12"
-                                       Foreground="{x:Static ui:Colors.WindowFontBrush}"/>
+                                    <TextBlock x:Name="CaptionTitleTextBlock"
+                                               Text="{TemplateBinding Title}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Top"
+                                               Margin="0,4,0,0"
+                                               FontSize="12"
+                                               Foreground="{x:Static ui:Colors.WindowFontBrush}"/>
 
                                     <StackPanel Orientation="Horizontal" 
                                         VerticalAlignment="Top" 
