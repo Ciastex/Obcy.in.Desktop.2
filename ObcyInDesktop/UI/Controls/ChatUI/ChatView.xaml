@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ObcyInDesktop.UI.Controls.ChatUI.ChatView"
+<UserControl x:Class="ObcyInDesktop.UI.Controls.ChatUI.ChatView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:ui="clr-namespace:ObcyInDesktop.UI"
@@ -69,12 +69,12 @@
         </Style>
     </UserControl.Resources>
     <Grid Background="Transparent">
-        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="0,0,0,100" BorderThickness="0,0,0,1"
+        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="0,0,0,120" BorderThickness="0,0,0,1"
                 BorderBrush="{x:Static ui:Colors.WindowSeparatorBrush}">
             <chatUI:MessageLogControl x:Name="MessageLog" Width="Auto" Height="Auto" MouseDoubleClick="MessageLog_OnMouseDoubleClick"/>
         </Border>
 
-        <Grid x:Name="ToolbarGrid" Margin="0,0,0,80">
+        <Grid x:Name="ToolbarGrid" Margin="0,0,0,100">
             <TextBlock x:Name="StatusTextBlock" 
                    HorizontalAlignment="Right" 
                    VerticalAlignment="Bottom" 
@@ -91,7 +91,7 @@
                  HorizontalAlignment="Stretch" 
                  BorderThickness="0,1,0,0"  
                  BorderBrush="{x:Static ui:Colors.WindowSeparatorBrush}" 
-                 Height="76" 
+                 Height="96" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Bottom" 
                  Width="Auto" 
