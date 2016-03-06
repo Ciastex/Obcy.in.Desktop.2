@@ -1,4 +1,4 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:commands="clr-namespace:ObcyInDesktop.UI.Commands"
                     xmlns:ui="clr-namespace:ObcyInDesktop.UI">
@@ -254,7 +254,7 @@
                         <Grid>
                             <Border x:Name="CaptionBar"
                                     Grid.ZIndex="1"  
-                                    BorderThickness="1,0,0,1" 
+                                    BorderThickness="0,0,0,1" 
                                     VerticalAlignment="Top" 
                                     HorizontalAlignment="Stretch"
                                     Width="Auto" 
@@ -270,7 +270,7 @@
                                                   CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
                                 </Border.InputBindings>
                                 <Grid Height="24" VerticalAlignment="Top" Background="Transparent" HorizontalAlignment="Stretch">
-                                    <Button x:Name="HidePanelButton"
+                                    <!--<Button x:Name="HidePanelButton"
                                             HorizontalAlignment="Left" 
                                             Height="10" 
                                             Width="5" 
@@ -278,7 +278,7 @@
                                             Margin="4,0,0,0"
                                             Style="{StaticResource TogglePanelButtonStyle}"
                                             Command="{x:Static commands:WindowCommands.TogglePanel}"
-                                            CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
+                                            CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>-->
 
                                     <TextBlock Text="{TemplateBinding Title}"
                                        HorizontalAlignment="Center"

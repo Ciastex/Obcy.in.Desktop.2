@@ -83,11 +83,6 @@ namespace ObcyInDesktop.Windows
         {
             _firstEscPressed = false;
             _escTimer.Stop();
-
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                StartConversationButton.Content = LocaleSelector.GetLocaleString("LeftPanel_EndConversationButton");
-            });
         }
 
         private void SettingsSelector_SettingsChanged(object sender, EventArgs e)
@@ -108,12 +103,9 @@ namespace ObcyInDesktop.Windows
 
         private void CreateConnection()
         {
-            App.Connection.OnlinePeopleCountChanged += connection_OnlinePeopleCountChanged;
             App.Connection.StrangerFound += connection_StrangerFound;
-            App.Connection.ConversationEnded += connection_ConversationEnded;
             App.Connection.MessageReceived += connection_MessageReceived;
             App.Connection.SocketClosed += connection_SocketClosed;
-            App.Connection.ServerClosedConnection += connection_ServerClosedConnection;
         }
 
         private void BlinkWindowGlow()
@@ -163,13 +155,6 @@ namespace ObcyInDesktop.Windows
 
         private void InitializeStatistics()
         {
-            App.StatsManager.BestConversationTimeChanged += statsManager_BestConversationTimeChanged;
-            App.StatsManager.ConversationCountChanged += statsManager_ConversationCountChanged;
-            App.StatsManager.CurrentConversationTimeChanged += statsManager_CurrentConversationTimeChanged;
-            App.StatsManager.KilometersCountChanged += statsManager_KilometersCountChanged;
-            App.StatsManager.ReceivedMessagesCountChanged += statsManager_ReceivedMessagesCountChanged;
-            App.StatsManager.SentMessagesCountChanged += statsManager_SentMessagesCountChanged;
-
             if (File.Exists(Path.Combine(DirectoryGuard.DataDirectory, DirectoryGuard.StatisticsFileName)))
             {
                 App.StatsManager.LoadStats(
@@ -198,97 +183,19 @@ namespace ObcyInDesktop.Windows
             });
         }
 
-        private void connection_ServerClosedConnection(object sender, EventArgs e)
-        {
-            Application.Current.Dispatcher.Invoke(() => StartConversationButton.IsEnabled = false);
-        }
-
         private void connection_SocketClosed(object sender, SocketClosedEventArgs e)
         {
-            Application.Current.Dispatcher.Invoke(() => StartConversationButton.IsEnabled = false);
             App.StatsManager.StopRecording();
-        }
-
-        private void statsManager_BestConversationTimeChanged(object sender, EventArgs e)
-        {
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                BestConversationTimeTextBlock.Text =
-                    $"{App.StatsManager.Statistics.BestConversationTime.Hours.ToString("00")}:{App.StatsManager.Statistics.BestConversationTime.Minutes.ToString("00")}:{App.StatsManager.Statistics.BestConversationTime.Seconds.ToString("00")}";
-            });
-        }
-
-        private void statsManager_ConversationCountChanged(object sender, EventArgs e)
-        {
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                TotalConversationCountTextBlock.Text = App.StatsManager.Statistics.ConversationCount.ToString("000000");
-            });
-        }
-
-        private void statsManager_CurrentConversationTimeChanged(object sender, EventArgs e)
-        {
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                CurrentConversationTimeTextBlock.Text =
-                    $"{App.StatsManager.CurrentConversationTime.Hours.ToString("00")}:{App.StatsManager.CurrentConversationTime.Minutes.ToString("00")}:{App.StatsManager.CurrentConversationTime.Seconds.ToString("00")}";
-            });
-        }
-
-        private void statsManager_KilometersCountChanged(object sender, EventArgs e)
-        {
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                TotalKilometersCountTextBlock.Text = App.StatsManager.Statistics.KilometersCount.ToString("000000");
-            });
-        }
-
-        private void statsManager_ReceivedMessagesCountChanged(object sender, EventArgs e)
-        {
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                TotalMessagesReceivedTextBlock.Text = App.StatsManager.Statistics.MessagesReceived.ToString("000000");
-            });
-        }
-
-        private void statsManager_SentMessagesCountChanged(object sender, EventArgs e)
-        {
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                TotalMessagesSentTextBlock.Text = App.StatsManager.Statistics.MessagesSent.ToString("000000");
-            });
-        }
-
-        private void connection_ConversationEnded(object sender, ConversationEndedEventArgs e)
-        {
-            if (!e.DisconnectInfo.IsReminder)
-            {
-                Application.Current.Dispatcher.Invoke(() =>
-                {
-                    StartConversationButton.Content = LocaleSelector.GetLocaleString("LeftPanel_StartConversationButton");
-                });
-            }
         }
 
         private void connection_StrangerFound(object sender, StrangerFoundEventArgs e)
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
-                StartConversationButton.IsEnabled = true;
-                StartConversationButton.Content = LocaleSelector.GetLocaleString("LeftPanel_EndConversationButton");
-
                 if (SettingsSelector.GetConfigurationValue<bool>("Behavior_SendSexQueryOnStart"))
                 {
                     _chatView.SendMessage("km, wiek?");
                 }
-            });
-        }
-
-        private void connection_OnlinePeopleCountChanged(object sender, OnlineCountEventArgs e)
-        {
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                PeopleCountTextBlock.Text = string.Format(LocaleSelector.GetLocaleString("LeftPanel_PeopleCountIndicator"), e.CurrentCount);
             });
         }
 
@@ -309,19 +216,6 @@ namespace ObcyInDesktop.Windows
             glow?.BeginAnimation(DropShadowEffect.ColorProperty, _glowFadeOutAnimation);
 
             _borderDeactivateStoryboard.Begin();
-        }
-
-        private void StartConversationButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            if (!App.Connection.IsStrangerConnected && !App.Connection.IsSearchingForStranger)
-            {
-                _chatView.SearchForStranger();
-                StartConversationButton.IsEnabled = false;
-            }
-            else if (App.Connection.IsStrangerConnected)
-            {
-                _chatView.DisconnectFromStranger();
-            }
         }
 
         private void ToggleCopyViewMenuItem_OnClick(object sender, RoutedEventArgs e)
@@ -423,11 +317,6 @@ namespace ObcyInDesktop.Windows
                 if (!_firstEscPressed)
                 {
                     _escTimer.Start();
-
-                    Application.Current.Dispatcher.Invoke(() =>
-                    {
-                        StartConversationButton.Content = LocaleSelector.GetLocaleString("LeftPanel_SureAboutDisconnect");
-                    });
                     _firstEscPressed = true;
                 }
                 else
@@ -439,11 +328,6 @@ namespace ObcyInDesktop.Windows
             }
             else
             {
-                Application.Current.Dispatcher.Invoke(() =>
-                {
-                    StartConversationButton.IsEnabled = false;
-                });
-
                 _chatView.SearchForStranger();
             }
         }
