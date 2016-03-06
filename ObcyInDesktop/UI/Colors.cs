@@ -14,9 +14,6 @@ namespace ObcyInDesktop.UI
         public static Color CaptionButtonIdle { get; set; }
         public static Color CaptionButtonHover { get; set; }
 
-        public static Color PanelHideButtonIdle { get; set; }
-        public static Color PanelHideButtonHover { get; set; }
-
         public static Color MainMenuButtonIdle { get; set; }
         public static Color MainMenuButtonHover { get; set; }
 
@@ -94,9 +91,6 @@ namespace ObcyInDesktop.UI
 
         public static SolidColorBrush CaptionButtonIdleBrush => new SolidColorBrush(CaptionButtonIdle);
         public static SolidColorBrush CaptionButtonHoverBrush => new SolidColorBrush(CaptionButtonHover);
-
-        public static SolidColorBrush PanelHideButtonIdleBrush => new SolidColorBrush(PanelHideButtonIdle);
-        public static SolidColorBrush PanelHideButtonHoverBrush => new SolidColorBrush(PanelHideButtonHover);
 
         public static SolidColorBrush MainMenuButtonIdleBrush => new SolidColorBrush(MainMenuButtonIdle);
         public static SolidColorBrush MainMenuButtonHoverBrush => new SolidColorBrush(MainMenuButtonHover);
@@ -176,8 +170,6 @@ namespace ObcyInDesktop.UI
 
             CaptionButtonIdle = HexColor("000000");
             CaptionButtonHover = HexColor("777777");
-            PanelHideButtonIdle = HexColor("A0A0A0");
-            PanelHideButtonHover = HexColor("707070");
 
             MainMenuButtonIdle = HexColor("007BDA");
             MainMenuButtonHover = HexColor("1979CA");

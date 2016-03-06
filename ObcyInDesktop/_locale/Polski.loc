@@ -38,24 +38,6 @@ TopicControl_NewTopicReceived=nowy temat rozmowy
 PresenceControl_ConversationStarted=rozmowa rozpoczęta
 PresenceControl_ConversationEnded=rozmowa zakończona
 
-# Left panel related strings
-LeftPanel_StartConversationButton=zacznij rozmowę
-LeftPanel_EndConversationButton=zakończ rozmowę
-LeftPanel_SureAboutDisconnect=na pewno?
-LeftPanel_PeopleCountIndicator={0} osób online
-LeftPanel_PeopleCountIndicatorChecking=sprawdzam ilość ludzi...
-
-# Left panel statistics related strings
-LeftPanel_CurrentConversationTime=aktualny czas rozmowy:
-LeftPanel_BestConversationTime=najlepszy czas rozmowy:
-LeftPanel_TotalConversationCount=całkowita liczba rozmów:
-LeftPanel_TotalKilometersCount=całkowita liczba kilometrów:
-LeftPanel_TotalMessagesReceivedCount=ilość otrzymanych wiadomości:
-LeftPanel_TotalMessagesSentCount=ilość wysłanych wiadomości:
-
-# Window titles
-Window_Settings=Ustawienia
-
 # Debugging window related strings
 DebugWindow_Title=Debugowanie
 DebugWindow_InsertTemplate=wstaw szablon

@@ -38,21 +38,6 @@ TopicControl_NewTopicReceived=yer new random stuff to talk 'bout
 PresenceControl_ConversationStarted=babblin' begins
 PresenceControl_ConversationEnded=babblin' ends
 
-# Left panel related strings
-LeftPanel_StartConversationButton=new babblin'
-LeftPanel_EndConversationButton=end babblin'
-LeftPanel_SureAboutDisconnect=ye cert'n?
-LeftPanel_PeopleCountIndicator={0} people babblin' now
-LeftPanel_PeopleCountIndicatorChecking=lookin' at the Port
-
-# Left panel statistics related strings
-LeftPanel_CurrentConversationTime=currrrrent babblin' time:
-LeftPanel_BestConversationTime=best babblin' time:
-LeftPanel_TotalConversationCount=total babblin' count:
-LeftPanel_TotalKilometersCount=total miles sail'd:
-LeftPanel_TotalMessagesReceivedCount=total babbles received:
-LeftPanel_TotalMessagesSentCount=total babbles told:
-
 # Debugging window related strings
 DebugWindow_Title=Debugging
 DebugWindow_InsertTemplate=insert template

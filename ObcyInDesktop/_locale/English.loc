@@ -38,21 +38,6 @@ TopicControl_NewTopicReceived=new conversation topic
 PresenceControl_ConversationStarted=conversation started
 PresenceControl_ConversationEnded=conversation ended
 
-# Left panel related strings
-LeftPanel_StartConversationButton=start conversation
-LeftPanel_EndConversationButton=end conversation
-LeftPanel_SureAboutDisconnect=sure about that?
-LeftPanel_PeopleCountIndicator={0} people online right now
-LeftPanel_PeopleCountIndicatorChecking=checking online people...
-
-# Left panel statistics related strings
-LeftPanel_CurrentConversationTime=current conversation time:
-LeftPanel_BestConversationTime=best conversation time:
-LeftPanel_TotalConversationCount=total conversation count:
-LeftPanel_TotalKilometersCount=total kilometers count:
-LeftPanel_TotalMessagesReceivedCount=total messages received:
-LeftPanel_TotalMessagesSentCount=total messages sent:
-
 # Debugging window related strings
 DebugWindow_Title=Debugging
 DebugWindow_InsertTemplate=insert template

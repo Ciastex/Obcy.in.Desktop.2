@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 
 <ColorScheme Name="Obcy.in Desktop Standard">
   <UsesDarkIconTheme />
@@ -12,8 +12,6 @@
   
   <Color Key="CaptionButtonIdle" Value="000000"/>
   <Color Key="CaptionButtonHover" Value="777777"/>
-  <Color Key="PanelHideButtonIdle" Value="A0A0A0"/>
-  <Color Key="PanelHideButtonHover" Value="C0C0C0"/>
   
   <Color Key="MainMenuButtonIdle" Value="007BDA"/>
   <Color Key="MainMenuButtonHover" Value="1979CA"/>
