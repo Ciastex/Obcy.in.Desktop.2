@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObcyInDesktop", "ObcyInDesktop\ObcyInDesktop.csproj", "{167CC88A-E32B-42EE-985D-64697AECB488}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObcyProtoRev", "ObcyProtoRev\ObcyProtoRev\ObcyProtoRev.csproj", "{9D97B42E-219C-481F-8909-0415DD620586}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObcyProtoRev", "ObcyProto\ObcyProtoRev\ObcyProtoRev.csproj", "{9D97B42E-219C-481F-8909-0415DD620586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
