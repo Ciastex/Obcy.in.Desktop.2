@@ -1,0 +1,3 @@
+[submodule "ObcyProto"]
+	path = ObcyProto
+	url = https://github.com/Ciastex/ObcyProtoRev.git
