@@ -36,6 +36,7 @@ TopicControl_NewTopicReceived=nowy temat rozmowy
 
 # Presence control related strings
 PresenceControl_ConversationStarted=rozmowa rozpoczęta
+PresenceControl_ConversationStartedButUnpleasant=rozmowa rozpoczęta (ten obcy jest oznaczony jako nieprzyjemny)
 PresenceControl_ConversationEnded=rozmowa zakończona
 
 # Debugging window related strings

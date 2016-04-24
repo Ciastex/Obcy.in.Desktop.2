@@ -36,6 +36,7 @@ TopicControl_NewTopicReceived=new conversation topic
 
 # Presence control related strings
 PresenceControl_ConversationStarted=conversation started
+PresenceControl_ConversationStartedButUnpleasant=conversation started (this stranger is marked as unpleasant)
 PresenceControl_ConversationEnded=conversation ended
 
 # Debugging window related strings

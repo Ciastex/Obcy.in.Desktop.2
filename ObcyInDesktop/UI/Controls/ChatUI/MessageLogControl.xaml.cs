@@ -58,6 +58,17 @@ namespace ObcyInDesktop.UI.Controls.ChatUI
             }
         }
 
+        public void AddPresence(bool started, bool alreadyTalkedWith)
+        {
+            var pc = new PresenceControl(started, alreadyTalkedWith);
+            MessagePanel.Children.Add(pc);
+
+            if (ScrollOnMessage)
+            {
+                ScrollView.ScrollToEnd();
+            }
+        }
+
         public void ToggleCopyView()
         {
             switch (CopyView.Visibility)

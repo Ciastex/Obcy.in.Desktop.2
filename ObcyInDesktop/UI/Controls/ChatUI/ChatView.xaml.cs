@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
@@ -22,9 +23,12 @@ namespace ObcyInDesktop.UI.Controls.ChatUI
         
         private bool _typing;
 
+        private readonly List<int> _encounteredStrangerList;
+
         public ChatView()
         {
             InitializeComponent();
+            _encounteredStrangerList = new List<int>();
         }
 
         public ChatView(Connection connection)
@@ -280,7 +284,7 @@ namespace ObcyInDesktop.UI.Controls.ChatUI
                 ChatBox.IsEnabled = true;
                 ChatBox.Focus();
 
-                MessageLog.AddPresence(true);
+                MessageLog.AddPresence(true, e.StrangerInfo.FlaggedAsUnpleasant);
                 StatusTextBlock.Text = LocaleSelector.GetLocaleString("StatusIndicator_StrangerIdle");
 
                 Toolbar.FlagStrangerButton.IsEnabled = true;

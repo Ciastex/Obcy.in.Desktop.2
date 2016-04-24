@@ -36,6 +36,7 @@ TopicControl_NewTopicReceived=yer new random stuff to talk 'bout
 
 # Presence control related strings
 PresenceControl_ConversationStarted=babblin' begins
+PresenceControl_ConversationStartedButUnpleasant=babblin' begins (yer landlubber has marrrrrks)
 PresenceControl_ConversationEnded=babblin' ends
 
 # Debugging window related strings
