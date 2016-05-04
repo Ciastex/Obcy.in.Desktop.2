@@ -92,6 +92,8 @@
                                           Click="ToggleToolbarMenuItem_OnClick"/>
                                 <MenuItem Header="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=Menu_View_ToggleCopyView}"
                                           Click="ToggleCopyViewMenuItem_OnClick"/>
+                                <MenuItem Header="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=Menu_View_Statistics}"
+                                          Click="ViewStatisticsMenuItem_OnClick"/>
                                 <MenuItem Header="{Binding Converter={StaticResource LocaleConverter}, ConverterParameter=Menu_View_AboutThisApplication}"
                                           Click="AboutApplicationMenuItem_OnClick"/>
                             </ContextMenu>

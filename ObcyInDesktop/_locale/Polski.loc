@@ -9,6 +9,7 @@ Menu_Options_Settings=Ustawienia
 Menu_View=Widok
 Menu_View_ToggleToolbar=Przełącz pasek narzędzi
 Menu_View_ToggleCopyView=Przełącz tryb kopiowania
+Menu_View_Statistics=Statystyki
 Menu_View_AboutThisApplication=O tej aplikacji
 
 # Toolbar related strings

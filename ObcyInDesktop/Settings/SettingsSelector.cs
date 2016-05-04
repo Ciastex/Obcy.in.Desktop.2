@@ -4,7 +4,7 @@ using ObcyInDesktop.Filesystem;
 
 namespace ObcyInDesktop.Settings
 {
-    static class SettingsSelector
+    internal static class SettingsSelector
     {
         public static event EventHandler SettingsChanged;
         private static readonly SettingsManager SettingsManager;

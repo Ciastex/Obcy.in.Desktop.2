@@ -37,7 +37,7 @@ namespace ObcyInDesktop.Settings
                 {
                     foreach (var kvp in this)
                     {
-                        sw.WriteLine("{0}={1}", kvp.Key, kvp.Value);
+                        sw.WriteLine($"{kvp.Key}={kvp.Value}");
                     }
                 }
             }

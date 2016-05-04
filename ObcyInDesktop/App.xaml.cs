@@ -13,9 +13,6 @@ using ObcyProtoRev.Protocol;
 
 namespace ObcyInDesktop
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App
     {
         public static WindowFlashHelper WindowFlashHelper { get; private set; }

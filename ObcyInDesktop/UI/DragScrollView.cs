@@ -29,8 +29,6 @@ namespace ObcyInDesktop.UI
 
         private const double DragPollingInterval = 10;
         private const double DefaultFriction = 0.2;
-        private const double MinimumFriction = 0.0;
-        private const double MaximumFriction = 1.0;
 
         private double _friction = DefaultFriction;
 
@@ -42,20 +40,6 @@ namespace ObcyInDesktop.UI
 
         private bool _mouseDown;
         private bool _isDragging;
-
-        public double Friction
-        {
-            get
-            {
-                return _friction;
-            }
-            set
-            {
-                _friction = Math.Min(
-                    Math.Max(value, MinimumFriction), MaximumFriction
-                );
-            }
-        }
 
         private Vector Velocity => new Vector(_currentPoint.X - _previousPoint.X, _currentPoint.Y - _previousPoint.Y);
         private Vector PreviousVelocity => new Vector(_previousPoint.X - _previousPreviousPoint.X, _previousPoint.Y - _previousPreviousPoint.Y);
@@ -122,7 +106,7 @@ namespace ObcyInDesktop.UI
             ScrollToHorizontalOffset(horizontalOffset);
         }
 
-        protected void DragScroll()
+        private void DragScroll()
         {
             if (_dragScrollTimer == null)
             {

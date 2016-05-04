@@ -5,7 +5,7 @@ namespace ObcyInDesktop.UI.Commands
 {
     public static class ChatViewCommands
     {
-        public static ICommand ClearLogCommand = new RelayCommand(o =>
+        public static readonly ICommand ClearLogCommand = new RelayCommand(o =>
         {
             var chatView = o as ChatView;
 
@@ -20,7 +20,7 @@ namespace ObcyInDesktop.UI.Commands
             ((ChatView)o).Connect();
         });
 
-        public static ICommand DisconnectFromStrangerCommand = new RelayCommand(o =>
+        public static readonly ICommand DisconnectFromStrangerCommand = new RelayCommand(o =>
         {
             var chatView = o as ChatView;
 
@@ -30,7 +30,7 @@ namespace ObcyInDesktop.UI.Commands
             chatView.DisconnectFromStranger();
         });
 
-        public static ICommand FlagStranger = new RelayCommand(o =>
+        public static readonly ICommand FlagStranger = new RelayCommand(o =>
         {
             var chatView = o as ChatView;
 
@@ -40,7 +40,7 @@ namespace ObcyInDesktop.UI.Commands
             chatView.FlagStranger();
         });
 
-        public static ICommand RequestRandomTopicCommand = new RelayCommand(o =>
+        public static readonly ICommand RequestRandomTopicCommand = new RelayCommand(o =>
         {
             var chatView = o as ChatView;
 
@@ -50,7 +50,7 @@ namespace ObcyInDesktop.UI.Commands
             chatView.RequestRandomTopic();
         });
 
-        public static ICommand SearchForStrangerCommand = new RelayCommand(o =>
+        public static readonly ICommand SearchForStrangerCommand = new RelayCommand(o =>
         {
             var chatView = o as ChatView;
 
@@ -61,7 +61,7 @@ namespace ObcyInDesktop.UI.Commands
             chatView.SearchForStranger();
         });
 
-        public static ICommand ToggleCopyViewCommand = new RelayCommand(o =>
+        public static readonly ICommand ToggleCopyViewCommand = new RelayCommand(o =>
         {
             var chatView = o as ChatView;
 
@@ -71,7 +71,7 @@ namespace ObcyInDesktop.UI.Commands
             chatView.ToggleCopyView();
         });
 
-        public static ICommand ToggleLogScrollingCommand = new RelayCommand(o =>
+        public static readonly ICommand ToggleLogScrollingCommand = new RelayCommand(o =>
         {
             var chatView = o as ChatView;
 

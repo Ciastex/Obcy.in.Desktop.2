@@ -2,7 +2,7 @@ using System.Windows.Media;
 
 namespace ObcyInDesktop.UI
 {
-    static class Colors
+    internal static class Colors
     {
         public static Color WindowBackground { get; set; }
         public static Color WindowActiveBorder { get; set; }

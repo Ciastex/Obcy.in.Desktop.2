@@ -3,15 +3,15 @@ using System.Linq;
 
 namespace ObcyInDesktop.Localization
 {
-    class LocaleFileParser
+    internal class LocaleFileParser
     {
         private readonly string _directory;
         private readonly LocaleManager _localeManager;
 
         public LocaleFileParser(string directory, LocaleManager localeManager)
         {
-            this._directory = directory;
-            this._localeManager = localeManager;
+            _directory = directory;
+            _localeManager = localeManager;
         }
         
         public void LoadTranslations()

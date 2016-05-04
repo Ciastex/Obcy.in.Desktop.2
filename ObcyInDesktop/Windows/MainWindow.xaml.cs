@@ -305,6 +305,8 @@ namespace ObcyInDesktop.Windows
             Environment.Exit(0);
         }
 
+
+
         private void ClearLogCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             _chatView.ClearLog();
@@ -332,6 +334,10 @@ namespace ObcyInDesktop.Windows
             }
         }
 
+        private void ViewStatisticsMenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
 
         private void FlagStrangerCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {

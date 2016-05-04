@@ -9,6 +9,7 @@ Menu_Options_Settings=Settings
 Menu_View=View
 Menu_View_ToggleToolbar=Toggle toolbar
 Menu_View_ToggleCopyView=Toggle copy-view
+Menu_View_Statistics=Statistics
 Menu_View_AboutThisApplication=About this application
 
 # Toolbar related strings

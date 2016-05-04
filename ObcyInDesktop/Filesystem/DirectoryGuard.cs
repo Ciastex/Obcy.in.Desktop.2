@@ -3,7 +3,7 @@ using System.IO;
 
 namespace ObcyInDesktop.Filesystem
 {
-    static class DirectoryGuard
+    internal static class DirectoryGuard
     {
         public static string AppDataDirectoryName => "ObcyInDesktop";
 
