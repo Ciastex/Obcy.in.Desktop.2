@@ -73,7 +73,7 @@ namespace ObcyInDesktop
                 MessageBox.Show("Exception is null", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
-        private bool HasWriteAccessToFolder(string folderPath)
+        private static bool HasWriteAccessToFolder(string folderPath)
         {
             try
             {

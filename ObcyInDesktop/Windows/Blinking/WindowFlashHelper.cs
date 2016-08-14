@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
@@ -22,12 +21,6 @@ namespace ObcyInDesktop.Windows.Blinking
             Flash(_mainWindowHWnd, 5);
         }
 
-        public void StopFlashing()
-        {
-            var fi = CreateFlashInfoStruct(_mainWindowHWnd, FlashwStop, uint.MaxValue, 0);
-            FlashWindowEx(ref fi);
-        }
-
         private void InitializeHandle()
         {
             if (_mainWindowHWnd == IntPtr.Zero)
@@ -38,25 +31,10 @@ namespace ObcyInDesktop.Windows.Blinking
         }
 
         [DllImport("user32.dll")]
-        static extern IntPtr GetForegroundWindow();
-
-        private static bool IsActive(Window wnd)
-        {
-            if (wnd == null) return false;
-            return GetForegroundWindow() == new WindowInteropHelper(wnd).Handle;
-        }
-
-        public static bool IsApplicationActive()
-        {
-            return Application.Current.Windows.OfType<Window>().Any(IsActive);
-        }
-
-        [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool FlashWindowEx(ref FlashWinfo pwfi);
 
         [StructLayout(LayoutKind.Sequential)]
-
         private struct FlashWinfo
         {
             public uint cbSize;
@@ -66,18 +44,8 @@ namespace ObcyInDesktop.Windows.Blinking
             public uint dwTimeout;
         }
 
-        public const uint FlashwStop = 0;
-        public const uint FlashwCaption = 1;
-        public const uint FlashwTray = 2;
-        public const uint FlashwAll = 3;
-        public const uint FlashwTimer = 4;
-        public const uint FlashwTimerNoFg = 12;
-
-        public static bool Flash(IntPtr hwnd)
-        {
-            FlashWinfo fi = CreateFlashInfoStruct(hwnd, FlashwAll | FlashwTimerNoFg, uint.MaxValue, 0);
-            return FlashWindowEx(ref fi);
-        }
+        private const uint FlashwAll = 3;
+        private const uint FlashwTimerNoFg = 12;
 
         private static FlashWinfo CreateFlashInfoStruct(IntPtr handle, uint flags, uint count, uint timeout)
         {
@@ -90,10 +58,10 @@ namespace ObcyInDesktop.Windows.Blinking
             return fi;
         }
 
-        public static bool Flash(IntPtr hwnd, uint count)
+        private static void Flash(IntPtr hwnd, uint count)
         {
-            FlashWinfo fi = CreateFlashInfoStruct(hwnd, FlashwAll | FlashwTimerNoFg, count, 0);
-            return FlashWindowEx(ref fi);
+            var fi = CreateFlashInfoStruct(hwnd, FlashwAll | FlashwTimerNoFg, count, 0);
+            FlashWindowEx(ref fi);
         }
     }
 }

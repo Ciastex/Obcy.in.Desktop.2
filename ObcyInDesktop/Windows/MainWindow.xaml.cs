@@ -330,7 +330,10 @@ namespace ObcyInDesktop.Windows
             }
             else
             {
-                _chatView.SearchForStranger();
+                if (!App.Connection.IsSearchingForStranger)
+                {
+                    _chatView.SearchForStranger();
+                }
             }
         }
 
